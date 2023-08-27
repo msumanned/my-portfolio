@@ -91,10 +91,10 @@ header .menu_list{
 }
 .home .container{
     display: grid;
-    grid-template-columns: 50% auto;
+    grid-template-columns: auto auto;
 }
 .home_greeting{
-    font-size: 30px;
+    font-size: 40px;
     padding: 0 0 40px 0;
 }
 .home_content p{
@@ -188,4 +188,7 @@ header .menu_list{
     height: 3px;
     border: 1px double var(--main-color);
     width: 15%;
+}
+.servicces{
+    background-color: var(--second-bg-color);
 }
