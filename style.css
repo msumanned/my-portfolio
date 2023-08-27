@@ -155,7 +155,7 @@ header .menu_list{
     }
     70%,
     100%{
-        width: 100%;
+        width: 50%;
     }
 
 }
