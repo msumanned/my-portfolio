@@ -1,13 +1,17 @@
 *{
+
     margin: 0;
     padding: 0;
     font-family: 'poppins', sans-serif;
     text-decoration: none;
     box-sizing: border-box;
 }
+p{
+    font-weight: 200;
+}
 :root{
-    --bg-color: #2a2a2a;
-    --second-bg-color: #202020;
+    --bg-color: #333333;
+    --second-bg-color: #282828;
     --text-color: #ffff;
     --main-color: #ffab01;
     --big-font: 80px;
@@ -85,16 +89,45 @@ header .menu_list{
     align-items: center;
     padding: 0% 10%;
 }
+.home .container{
+    display: grid;
+    grid-template-columns: 50% auto;
+}
 .home_greeting{
     font-size: 30px;
-    margin-bottom: 30px;
+    padding: 0 0 40px 0;
+}
+.home_content p{
+    line-height: 1.5;
+    letter-spacing: 1px;
+    padding: 0 0 40px 0;
+    font-weight: 200;
+}
+.home_content a{
+    background-color: var(--main-color);
+    color: white;
+    padding: 7px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+.home_content .work{
+    background: transparent;
+    border: 1px solid var(--main-color);
+    margin: 0 0 0 20px;
+}
+.home_content a:hover{
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px var(--main-color);
+    transition: all .40s ease;
 }
 .name h2{
     font-size: 50px;
     line-height: 0.5;
 }
 .passion h3{
-    font-size: 40px;
+    font-size: 30px;
     color: var(--bg-color);
     text-transform: uppercase;
     -webkit-text-stroke: 0.5px #ffab01;
@@ -138,4 +171,21 @@ header .menu_list{
 .my_img img{
     /* border-radius: 500px; */
     box-shadow: 0px 10px 10px #ffab01;
+}
+.about_me h2{
+    font-size: var(--h2-font);
+}
+.about_me p{
+    padding: 40px 0 0 0;
+}
+.about_me ul li{
+    padding: 10px 0 0 0;
+    color: var(--main-color);
+    letter-spacing: 1.5px;
+}
+.height{
+    background-color: white;
+    height: 3px;
+    border: 1px double var(--main-color);
+    width: 15%;
 }
