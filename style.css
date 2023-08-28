@@ -11,13 +11,16 @@
     --second-bg-color: #282828;
     --text-color: #ffff;
     --main-color: #ffab01;
-    --big-font: 80px;
     --h2-font: 40px;
     --p-font: 16px;
 }
 
 h2 {
     font-size: var(--h2-font);
+    letter-spacing: 1.5px;
+}
+h3{
+    font-size: 28px;
 }
 
 p {
@@ -122,13 +125,17 @@ header .menu_list {
     font-weight: 200;
     text-align: left;
 }
+
 .home_content a {
     font-size: 16px;
 }
+
 .service-content a {
     font-size: 14px;
 }
-.home_content a , .service-content a {
+
+.home_content a,
+.service-content a {
     background-color: var(--main-color);
     color: white;
     padding: 7px 20px;
@@ -143,7 +150,8 @@ header .menu_list {
     margin: 0 0 0 20px;
 }
 
-.home_content a:hover, .service-content a:hover {
+.home_content a:hover,
+.service-content a:hover {
     letter-spacing: 2px;
     box-shadow: 0 0 10px var(--main-color);
     transition: all .40s ease;
@@ -155,7 +163,7 @@ header .menu_list {
     line-height: 0.5;
 }
 
-.passion h3 {
+.passion h4 {
     font-size: 25px;
     color: var(--bg-color);
     text-transform: uppercase;
@@ -222,37 +230,38 @@ header .menu_list {
     width: 15%;
 }
 
-.services{
+.services, .portfolio {
     background-color: var(--second-bg-color);
     padding: 5% 10%;
     text-align: center;
 }
 
-.services .height, .skills_section .height {
+.services .height,
+.skills_section .height, .portfolio .height{
     margin: auto;
     width: 10%;
 }
 
 .grid-service {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 30% 30% 30%;
     gap: 5%;
     padding: 5% 0 0 0;
 }
 
-.grid-item-service:hover {
+.grid-service-box:hover {
     transform: translateY(-10px);
     cursor: pointer;
 }
 
-.service-content {
+.grid-service-box {
     text-align: center;
     background-color: var(--bg-color);
     padding: 10% 5%;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
-.service-content .service-icon{
+.service-content .service-icon {
     width: 40%;
     background-color: var(--second-bg-color);
     color: var(--main-color);
@@ -263,30 +272,159 @@ header .menu_list {
     outline: 4px solid var(--second-bg-color);
     box-shadow: 0 0 10px #ffab01;
 }
-.service-content h3{
+
+.service-content h3 {
     padding: 20px 0 0 0;
     font-size: 28px;
     font-weight: 600;
     text-transform: capitalize;
 }
-.service-content p{
+
+.service-content p {
     font-size: 16px;
     padding: 0 0 20px 0;
 }
-.skills_section{
+
+.skills_section {
     padding: 5% 10%;
 }
-.skills_section .main-text{
+
+.skills_section .main-text {
     text-align: center;
 }
-.skill_content{
+
+.skill_content {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 5%;
     padding: 5% 0;
     text-align: center;
+    align-items: center;
 }
-.info{
+
+.info {
     display: flex;
     justify-content: space-between;
+    padding: 0 0 5px 0;
+}
+
+.info-bar {
+    padding: 2% 2%;
+
+}
+.info-bar p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.info-bar .bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--second-bg-color);
+    border-radius: 20px;
+    position: relative;
+}
+
+.info-bar .bar span {
+
+    height: 100%;
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.html {
+    width: 89%;
+    animation: html 2s;
+}
+
+.css {
+    width: 72%;
+    animation: css 3s;
+}
+
+.java {
+    width: 65%;
+    animation: java 4s;
+}
+
+.jquery {
+    width: 70%;
+    animation: jquery 5s;
+}
+
+.figma {
+    width: 80%;
+    animation: figma 6s;
+}
+.wordpress{
+    width: 70%;
+    animation: wordpress s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 89%;
+    }
+
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 72%;
+    }
+
+}
+
+@keyframes java {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 65%;
+    }
+
+}
+
+@keyframes jquery {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+
+}
+
+@keyframes figma {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+
+}
+@keyframes wordpress {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+
 }
