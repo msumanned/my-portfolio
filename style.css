@@ -171,7 +171,7 @@ header .menu_list {
     position: relative;
 }
 
-.passion h3::before {
+.passion h4::before {
     color: var(--main-color);
     top: 0;
     left: 0;
@@ -203,7 +203,7 @@ header .menu_list {
 .grid-container {
     display: grid;
     gap: 10%;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     align-items: center;
     padding: 5% 10%;
 
@@ -229,22 +229,23 @@ header .menu_list {
     border: 2px dotted var(--main-color);
     width: 15%;
 }
-
-.services, .portfolio {
+.services, .portfolio{
     background-color: var(--second-bg-color);
+}
+.services, .portfolio, .contact {
     padding: 5% 10%;
     text-align: center;
 }
 
 .services .height,
-.skills_section .height, .portfolio .height{
+.skills_section .height, .portfolio .height, .contact .height{
     margin: auto;
     width: 10%;
 }
 
 .grid-service {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     gap: 5%;
     padding: 5% 0 0 0;
 }
@@ -362,6 +363,85 @@ header .menu_list {
 .wordpress{
     width: 70%;
     animation: wordpress s;
+}
+
+/* portfolio */
+.grid_portfolio{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap: 5%;
+    padding: 5% 0 0 0;
+}
+
+.portfolio_card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    display: flex;
+    grid-template-rows: 1fr auto;
+}
+.project_img{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.project_img img{
+    width: 100%;
+    height: 100%;
+    /* transition: .5s ; */
+
+}
+.portfolio_text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    background: linear-gradient( rgba(0, 0, 0,0.1), #ffab01);
+}
+
+.portfolio_card:hover .portfolio_text{
+    opacity: 2;
+}
+
+.cta{
+    padding: 5% 10%;
+    background: var(--main-color);
+    text-align: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+footer{
+    width: 100%;
+    background-color: var(--main-color);
+    text-align: center;
+}
+footer .footer_content{
+    padding: 1% 0%;
+    display: inline-flex;
+    letter-spacing: 1px;
+}
+.footer_content h4{
+    color: var(--text-color);
 }
 
 @keyframes html {
