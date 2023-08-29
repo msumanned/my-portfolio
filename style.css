@@ -19,7 +19,8 @@ h2 {
     font-size: var(--h2-font);
     letter-spacing: 1.5px;
 }
-h3{
+
+h3 {
     font-size: 28px;
 }
 
@@ -106,7 +107,7 @@ header .menu_list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0% 10%;
+    padding: 0 10%;
 }
 
 .home .container {
@@ -119,27 +120,35 @@ header .menu_list {
 }
 
 .home_content p {
-    line-height: 1.5;
+    line-height: 1.7;
     letter-spacing: 1px;
     padding: 0 0 40px 0;
     font-weight: 200;
     text-align: left;
 }
 
-.home_content a {
+.home_content .button, .cta a{
     font-size: 16px;
 }
 
-.service-content a {
+.service-content a{
     font-size: 14px;
 }
-
-.home_content a,
-.service-content a {
+.form button{
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+      
+   }
+.button{
+    padding: 0 0 10px 0;
+}
+.home_content .button a,
+.service-content a, .form button, .cta a{
     background-color: var(--main-color);
     color: white;
     padding: 7px 20px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 5px;
     letter-spacing: 1px;
 }
@@ -151,10 +160,11 @@ header .menu_list {
 }
 
 .home_content a:hover,
-.service-content a:hover {
+.service-content a:hover, .form button:hover, .cta a:hover {
     letter-spacing: 2px;
     box-shadow: 0 0 10px var(--main-color);
     transition: all .40s ease;
+    background: transparent;
 }
 
 .name h2 {
@@ -203,9 +213,9 @@ header .menu_list {
 .grid-container {
     display: grid;
     gap: 10%;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: center;
-    padding: 5% 10%;
+    padding: 8% 10%;
 
 }
 
@@ -229,23 +239,30 @@ header .menu_list {
     border: 2px dotted var(--main-color);
     width: 15%;
 }
-.services, .portfolio{
+
+.services,
+.portfolio, .contact {
     background-color: var(--second-bg-color);
 }
-.services, .portfolio, .contact {
-    padding: 5% 10%;
+
+.services,
+.portfolio,
+.contact, .skills_section , .cta {
+    padding: 8% 10%;
     text-align: center;
 }
 
 .services .height,
-.skills_section .height, .portfolio .height, .contact .height{
+.skills_section .height,
+.portfolio .height,
+.contact .height {
     margin: auto;
     width: 10%;
 }
 
 .grid-service {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 5%;
     padding: 5% 0 0 0;
 }
@@ -286,9 +303,6 @@ header .menu_list {
     padding: 0 0 20px 0;
 }
 
-.skills_section {
-    padding: 5% 10%;
-}
 
 .skills_section .main-text {
     text-align: center;
@@ -313,7 +327,8 @@ header .menu_list {
     padding: 2% 2%;
 
 }
-.info-bar p{
+
+.info-bar p {
     font-size: 16px;
     font-weight: 300;
 }
@@ -360,42 +375,45 @@ header .menu_list {
     width: 80%;
     animation: figma 6s;
 }
-.wordpress{
+
+.wordpress {
     width: 70%;
     animation: wordpress s;
 }
 
 /* portfolio */
-.grid_portfolio{
+.grid_portfolio {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 5%;
     padding: 5% 0 0 0;
 }
 
-.portfolio_card{
+.portfolio_card {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
     border: 1px solid var(--main-color);
     box-shadow: 0 0 10px var(--main-color);
-    display: flex;
+    display: grid;
     grid-template-rows: 1fr auto;
 }
-.project_img{
+
+.project_img {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
 }
-.project_img img{
+
+.project_img img {
     width: 100%;
     height: 100%;
     /* transition: .5s ; */
-
 }
-.portfolio_text{
+
+.portfolio_text {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -408,41 +426,115 @@ header .menu_list {
     align-items: center;
     text-align: center;
     transition: 0.5s;
-    background: linear-gradient( rgba(0, 0, 0,0.1), #ffab01);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #ffab01);
 }
 
-.portfolio_card:hover .portfolio_text{
+.portfolio_card:hover .portfolio_text {
     opacity: 2;
 }
 
-.cta{
-    padding: 5% 10%;
-    background: var(--main-color);
-    text-align: center;
+.cta h2{
+    font-size: 50px;
+    padding: 0 0 20px 0;
+}
+
+.contact_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10%;
+    text-align: left;
+    padding: 5% 0 0;
+}
+
+.contact_icon .call,
+.email {
+    display: flex;
     align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+.contact_left h3, .contact_left p{
+padding: 0 0 20px 0;
+}
+
+.call i,
+.email i {
+    text-shadow: 0 0 5px var(--main-color);
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+.call p,
+.email p {
+    padding: 0 0 0 10px;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+
+}
+
+.social_icons {
+    padding: 5px 0 0 0;
+    display: block;
+}
+.social_icons p{
+    padding: 0 0 2%;
+}
+.social_icons a i {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    background-color: var(--second-bg-color);
+    cursor: pointer;
+}
+.social_icons .fb_icon{
+    padding: 10px 15px;
+}
+
+.social_icons i:hover {
+    box-shadow: 0 0 10px var(--main-color);
+    color: var(--main-color);
+    font-size: 35px;
+}
+.form input{
+    width: 60%;
+}
+.form h3{
+    padding: 0 0 20px;
+}
+.form input,.form textarea{
+    padding: 10px;
+    margin: 2% 0 2% 1%;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 5px var(--main-color);
 }
 
 
 
-
-
-
-
-
-
-footer{
+footer {
     width: 100%;
     background-color: var(--main-color);
     text-align: center;
 }
-footer .footer_content{
+
+footer .footer_content {
     padding: 1% 0%;
     display: inline-flex;
     letter-spacing: 1px;
 }
-.footer_content h4{
+
+.footer_content h4 {
     color: var(--text-color);
 }
+
+
+
+/* @ key frames */
 
 @keyframes html {
     0% {
@@ -498,6 +590,7 @@ footer .footer_content{
     }
 
 }
+
 @keyframes wordpress {
     0% {
         width: 0%;
