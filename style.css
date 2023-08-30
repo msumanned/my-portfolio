@@ -44,8 +44,6 @@ header {
     box-shadow: 0 0 5px var(--second-bg-color);
 }
 
-
-
 .head {
     width: 100%;
     display: flex;
@@ -673,6 +671,6 @@ footer .footer_content {
 }
 @media(max-width:400px){
     .passion h4 {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
