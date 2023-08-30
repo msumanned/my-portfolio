@@ -34,11 +34,14 @@ body {
 }
 
 header {
+    padding: 2% 10%;
     width: 100%;
     position: fixed;
     background: transparent;
     z-index: 1000;
+    border-bottom: 1px solid var(--bg-color);
 }
+
 
 .head {
     width: 100%;
@@ -47,7 +50,6 @@ header {
     align-items: center;
     text-decoration: none;
     background: transparent;
-    padding: 2% 10%;
 }
 
 .logo {
@@ -55,6 +57,7 @@ header {
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 1px;
+    text-shadow: 0 0 10px var(--main-color);
 }
 
 span {
@@ -63,6 +66,7 @@ span {
 
 header .menu_list {
     display: flex;
+    justify-content: space-between;
     list-style: none;
     float: right;
 }
@@ -71,7 +75,7 @@ header .menu_list {
     text-decoration: none;
 }
 
-.menu_list a {
+.menu_list li a {
     color: var(--text-color);
     font-size: 17px;
     font-weight: 500;
@@ -79,12 +83,12 @@ header .menu_list {
 
 }
 
-.menu_icon {
+.menu_icon i{
     background-color: var(--main-color);
     color: #ffff;
     font-size: 25px;
     cursor: pointer;
-    padding: 0px 10px;
+    padding: 10px 10px;
     border-radius: 3px;
     display: none;
 }
@@ -110,21 +114,19 @@ header .menu_list {
     padding: 0 10%;
 }
 
-.home .container {
-    width: 50%;
-}
 
 .home_greeting {
     font-size: 40px;
-    padding: 0 0 40px 0;
+    padding: 0 0 5% 0;
 }
 
 .home_content p {
     line-height: 1.7;
     letter-spacing: 1px;
-    padding: 0 0 40px 0;
+    padding: 0 30% 5% 0;
     font-weight: 200;
     text-align: left;
+    
 }
 
 .home_content .button, .cta a{
@@ -159,7 +161,7 @@ header .menu_list {
     margin: 0 0 0 20px;
 }
 
-.home_content a:hover,
+.home_content .button a:hover,
 .service-content a:hover, .form button:hover, .cta a:hover {
     letter-spacing: 2px;
     box-shadow: 0 0 10px var(--main-color);
@@ -600,4 +602,39 @@ footer .footer_content {
         width: 70%;
     }
 
+}
+
+/* responsive */
+@media(max-width:768px){
+    .menu_icon i{
+        display: block;
+        transition: all .4s ease;
+    }
+    
+
+    .menu_list{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        background: var(--second-bg-color);
+        text-align: center;  
+        transition: all 0.4s ease;      
+
+    }
+    .menu_list li a{
+        display: block;
+        padding: 0 0 3% 0;
+        font-size: 16px;
+    }
+    .menu_list.open {
+        top: 80%;
+    }
+   
+   .home{
+    padding: 50% 10%;
+   }
+  
 }
