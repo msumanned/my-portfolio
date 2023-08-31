@@ -115,7 +115,6 @@ header .menu_list{
     padding: 0 10%;
 }
 
-
 .home_greeting {
     font-size: 40px;
     padding: 0 0 5% 0;
@@ -126,10 +125,10 @@ header .menu_list{
 .home_content p {
     line-height: 1.7;
     letter-spacing: 1px;
-    padding: 0 30% 5% 0;
+    width: 60%;
+    padding: 0 0% 5% 0;
     font-weight: 200;
-    text-align: left;
-    
+    text-align: left;  
 }
 
 .home_content .button, .cta a{
@@ -225,8 +224,9 @@ header .menu_list{
 }
 
 .my_img img {
-    border-radius: 50%;
-    box-shadow: 0px 10px 10px #ffab01;
+    border-radius: 10%;
+    box-shadow: 0px 0px 20px var(--main-color);
+    /* outline: 2px solid var(--main-color); */
     width: 100%;
 }
 
@@ -246,8 +246,8 @@ header .menu_list{
     width: 15%;
 }
 
-.services,
-.portfolio, .contact {
+#services,
+#projects, #contact {
     background-color: var(--second-bg-color);
 }
 
@@ -284,14 +284,16 @@ header .menu_list{
     padding: 10% 5%;
     border-radius: 20px;
 }
-.mobile_service{
-    padding: 28px;
+.mobile_icon i{
+    padding: 20px 25px;
 }
-.service-content .service-icon {
+.code_icon i, .cube_icon i{
+    padding: 20px;
+}
+.service-content .service-icon i {
     background-color: var(--second-bg-color);
     color: var(--main-color);
-    font-size: 48px;
-    padding: 28px;
+    font-size: 40px;
     border: 2px solid var(--main-color);
     border-radius: 50%;
     outline: 4px solid var(--second-bg-color);
@@ -388,6 +390,10 @@ header .menu_list{
     animation: wordpress s;
 }
 
+.skill_img img{
+    width: 100%;
+}
+
 /* portfolio */
 .grid_portfolio {
     display: grid;
@@ -439,7 +445,17 @@ header .menu_list{
 .portfolio_card:hover .portfolio_text {
     opacity: 2;
 }
+.portfolio_text p{
+    padding: 0 0 10px 0;
+}
+.portfolio_text i{
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-color);
+  
 
+}
 .cta h2{
     font-size: 50px;
     padding: 0 0 20px 0;
@@ -474,7 +490,7 @@ padding: 0 0 20px 0;
 .call p,
 .email p {
     padding: 0 0 0 10px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 1.5px;
 
@@ -613,7 +629,7 @@ footer .footer_content {
 /* responsive */
 @media(max-width: 950px){
     .logo{
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .menu_list li a {
@@ -622,8 +638,18 @@ footer .footer_content {
 }
 
 @media(max-width:768px){
-    #about, #services, #skills, #projects ,#contact{
+    :root{
+        --h2-font: 20px;
+        --p-font: 12px;
+    }
+    p{
+        font-size: 12px;
+    }
+    #about, #skills, #projects{
         padding: 5% 0 5% 0;
+    }
+    #services, #contact{
+        padding: 5% 0 100px 0;
     }
     .menu_icon i{
         display: block;
@@ -655,11 +681,10 @@ footer .footer_content {
         font-size: 30px;
     }
     .name h2 {
-        font-size: 30px;
+        font-size: 20px;
     }
     .home_content p {
-        padding: 0 0 0 0;
-        
+        width: 100%;        
     }
     .passion h4 {
         font-size: 20px;
@@ -667,10 +692,28 @@ footer .footer_content {
 .cta h2{
     font-size: 25px;
 }
-  
+.social_icons a i{
+    font-size: 16px;
 }
-@media(max-width:400px){
+
+.home_content .button .hire, .home_content .button .work{
+    font-size: 12px;
+    padding: 4px 10px;
+}
+.call p,
+.email p {
+    font-size: 12px;
+}
+.portfolio_text i{
+    font-size: 20px;
+    padding: 8px;
+}
+}
+@media(max-width:510px){
     .passion h4 {
+        font-size: 12px;
+    }
+    .footer_content{
         font-size: 12px;
     }
 }
