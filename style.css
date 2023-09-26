@@ -495,9 +495,10 @@ padding: 0 0 20px 0;
 }
 
 .call p,
-.email p {
+.email a p {
     padding: 0 0 0 10px;
-    font-size: 20px;
+    color: white;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.5px;
 
@@ -708,8 +709,10 @@ footer .footer_content {
     padding: 4px 10px;
 }
 .call p,
-.email p {
-    font-size: 12px;
+.email a p{
+    font-size: 10px;
+    color: white;
+
 }
 .portfolio_text i{
     font-size: 20px;
