@@ -28,6 +28,7 @@ p {
     font-weight: 200;
 }
 
+
 body {
     width: 100%;
     background-color: var(--bg-color);
@@ -453,7 +454,8 @@ header .menu_list{
 .portfolio_text p{
     padding: 0 0 10px 0;
 }
-.portfolio_text i{
+.portfolio_text a i{
+    color: var(--bg-color);
     font-size: 30px;
     padding: 10px;
     border-radius: 50%;
